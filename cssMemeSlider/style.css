@@ -1,0 +1,58 @@
+html {
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: gray;
+}
+
+.slider {
+    width: 70vw;
+    overflow: hidden;
+    border: 0.2rem solid white;
+    border-radius: 1rem;
+    margin: 15vh auto 5vh;
+
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: .5;
+    transition: all .5s ease;
+}
+
+input[name='radio'] {
+    visibility: hidden;
+
+}
+
+.bar:hover {
+    opacity: .8;
+    transform: scale(1.2) ;
+}
+
+.btn {
+    width: 1rem;
+    height: 1rem;
+    background-color: blue;
+    border-radius: 50%;
+}
