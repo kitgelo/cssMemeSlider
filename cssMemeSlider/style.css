@@ -18,6 +18,18 @@ body {
     margin: 5vh auto 2vh;
 }
 
+.container {
+    width: 55vw;
+    overflow: hidden;
+    margin: 5vh auto 2vh;
+}
+
+.desctop {
+    display: flex;
+    width: 400%;
+    transition: all .5s ease;
+}
+
 .navigation {
     margin-top: -1.5rem;
     display: flex;
@@ -43,7 +55,7 @@ input[name='radio'] {
 }
 
 .bar:hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
 }
 
 .btn {
@@ -60,8 +72,18 @@ input[name='radio'] {
     transform: scale(1.2);
 }
 
+#radio-1:checked ~ .navigation > label:nth-child(1) > div,
+#radio-2:checked ~ .navigation > label:nth-child(2) > div,
+#radio-3:checked ~ .navigation > label:nth-child(3) > div,
+#radio-4:checked ~ .navigation > label:nth-child(4) > div {
+    background-color: black;
+    transform: scale(1.2);
+}
+
+
 .slides {
     display: flex;
+    flex-direction: column;
     width: 400%;
     height: 90%;
 }
@@ -86,18 +108,88 @@ input[name='radio'] {
     height: 100%;
 }
 
-#radio-1:checked ~ .active {
+#radio-1:checked ~ .slide-go {
     margin-left: 0;
 }
 
-#radio-2:checked ~ .active {
-    margin-left: -25%;
+#radio-2:checked ~ .slide-go {
+    margin-left: -100%;
 }
 
-#radio-3:checked ~ .active {
-    margin-left: -50%;
+#radio-3:checked ~ .slide-go {
+    margin-left: -200%;
 }
 
-#radio-4:checked ~ .active {
-    margin-left: -75%;
+#radio-4:checked ~ .slide-go {
+    margin-left: -300%;
+}
+
+.media-text {
+    display: none;
+}
+
+@media (max-width: 1220px) {
+
+    .slide-text {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 980px) {
+
+    .bar {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .btn {
+        width: .8rem;
+        height: .8rem;
+    }
+
+
+    .slide-text {
+        max-width: 100%;
+    }
+
+    .navigation {
+        margin-top: 1rem;
+        justify-content: center;
+        gap: .5rem
+    }
+
+    .slide .slide-text {
+        display: none;
+    }
+
+    .media-text {
+        display: flex;
+        width: 400%;
+        height: 90%;
+        margin-left: -200%;
+    }
+
+    .slide-media {
+        width: 100%;
+        transition: all .5s ease;
+    }
+
+    #radio-1:checked ~ #medio-text {
+        margin-left: 0;
+    }
+    
+    #radio-2:checked ~ #medio-text {
+        margin-left: -100%;
+    }
+    
+    #radio-3:checked ~ #medio-text {
+        margin-left: -200%;
+    }
+    
+    #radio-4:checked ~ #medio-text {
+        margin-left: -300%;
+    }
+
+
+
 }
