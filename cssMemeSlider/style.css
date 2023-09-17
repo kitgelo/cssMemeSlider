@@ -15,16 +15,10 @@ body {
 .slider {
     width: 55vw;
     overflow: hidden;
-    margin: 5vh auto 2vh;
+    margin: 2vh auto 2vh;
 }
 
-.container {
-    width: 55vw;
-    overflow: hidden;
-    margin: 5vh auto 2vh;
-}
-
-.desctop {
+.desktop {
     display: flex;
     width: 400%;
     transition: all .5s ease;
@@ -89,7 +83,6 @@ input[name='radio'] {
     background-color: black;
     transform: scale(0.7);
 }
-
 
 .slides {
     display: flex;
@@ -156,7 +149,6 @@ input[name='radio'] {
         width: .8rem;
         height: .8rem;
     }
-
 
     .slide-media .slide-text {
         max-width: 100%;
