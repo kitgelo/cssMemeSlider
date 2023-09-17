@@ -13,15 +13,15 @@ body {
 }
 
 .slider {
-    width: 60vw;
+    width: 55vw;
     overflow: hidden;
-    margin: 15vh auto 2vh;
+    margin: 5vh auto 2vh;
 }
 
 .navigation {
-    margin-top: 2rem;
+    margin-top: -1.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     gap: .5rem;
 }
 
@@ -29,7 +29,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: white; */
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -68,8 +67,18 @@ input[name='radio'] {
 }
 
 .slide {
+    display: flex;
+    flex-direction: column;
     width: 25%;
     transition: all .5s ease;
+    gap: 4vh;
+}
+
+.slide-text {
+    max-width: 75%;
+    font-family: 'Merriweather', serif;
+    color: white;
+    line-height: 1.5rem;
 }
 
 .slide img {
