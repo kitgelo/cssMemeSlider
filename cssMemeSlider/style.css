@@ -41,8 +41,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     cursor: pointer;
     transition: all .5s ease;
@@ -59,6 +59,9 @@ input[name='radio'] {
 }
 
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 1rem;
     height: 1rem;
     background-color: blue;
@@ -67,17 +70,24 @@ input[name='radio'] {
 }
 
 .btn:hover {
-    background-color: rgb(155, 155, 208);
     border-radius: 50%;
     transform: scale(1.2);
 }
 
-#radio-1:checked ~ .navigation > label:nth-child(1) > div,
-#radio-2:checked ~ .navigation > label:nth-child(2) > div,
-#radio-3:checked ~ .navigation > label:nth-child(3) > div,
-#radio-4:checked ~ .navigation > label:nth-child(4) > div {
+.btn-intro {
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: blue;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+#radio-1:checked ~ .navigation > label:nth-child(1) > .btn > .btn-intro,
+#radio-2:checked ~ .navigation > label:nth-child(2) > .btn > .btn-intro,
+#radio-3:checked ~ .navigation > label:nth-child(3) > .btn > .btn-intro,
+#radio-4:checked ~ .navigation > label:nth-child(4) > .btn > .btn-intro {
     background-color: black;
-    transform: scale(1.2);
+    transform: scale(0.7);
 }
 
 
@@ -148,14 +158,17 @@ input[name='radio'] {
     }
 
 
-    .slide-text {
+    .slide-media .slide-text {
         max-width: 100%;
+        text-align: center;
+        font-size: .7rem;
+        line-height: 1rem;
     }
 
     .navigation {
         margin-top: 1rem;
         justify-content: center;
-        gap: .5rem
+        margin-bottom: 1rem;
     }
 
     .slide .slide-text {
@@ -177,19 +190,17 @@ input[name='radio'] {
     #radio-1:checked ~ #medio-text {
         margin-left: 0;
     }
-    
+
     #radio-2:checked ~ #medio-text {
         margin-left: -100%;
     }
-    
+
     #radio-3:checked ~ #medio-text {
         margin-left: -200%;
     }
-    
+
     #radio-4:checked ~ #medio-text {
         margin-left: -300%;
     }
-
-
 
 }
