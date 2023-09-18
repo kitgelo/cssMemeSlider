@@ -169,11 +169,11 @@ input[name='radio'] {
         width: 400%;
         height: 90%;
         margin-left: -200%;
+        transition: all .5s ease;
     }
 
     .slide-media {
         width: 100%;
-        transition: all .5s ease;
     }
 
     #radio-1:checked ~ #medio-text {
