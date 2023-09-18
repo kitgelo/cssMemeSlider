@@ -1,0 +1,195 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: gray;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.slider {
+    width: 55vw;
+    overflow: hidden;
+    margin: 2vh auto 2vh;
+}
+
+.desktop {
+    display: flex;
+    width: 400%;
+    transition: all .5s ease;
+}
+
+.navigation {
+    margin-top: -1.5rem;
+    display: flex;
+    justify-content: end;
+    gap: .5rem;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+input[name='radio'] {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.bar:hover {
+    transform: scale(1.2);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    background-color: blue;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+.btn:hover {
+    border-radius: 50%;
+    transform: scale(1.2);
+}
+
+.btn-intro {
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: blue;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+#radio-1:checked ~ .navigation > label:nth-child(1) > .btn > .btn-intro,
+#radio-2:checked ~ .navigation > label:nth-child(2) > .btn > .btn-intro,
+#radio-3:checked ~ .navigation > label:nth-child(3) > .btn > .btn-intro,
+#radio-4:checked ~ .navigation > label:nth-child(4) > .btn > .btn-intro {
+    background-color: black;
+    transform: scale(0.7);
+}
+
+.slides {
+    display: flex;
+    flex-direction: column;
+    width: 400%;
+    height: 90%;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    transition: all .5s ease;
+    gap: 4vh;
+}
+
+.slide-text {
+    max-width: 75%;
+    font-family: 'Merriweather', serif;
+    color: white;
+    line-height: 1.5rem;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#radio-1:checked ~ .slide-go {
+    margin-left: 0;
+}
+
+#radio-2:checked ~ .slide-go {
+    margin-left: -100%;
+}
+
+#radio-3:checked ~ .slide-go {
+    margin-left: -200%;
+}
+
+#radio-4:checked ~ .slide-go {
+    margin-left: -300%;
+}
+
+.media-text {
+    display: none;
+}
+
+@media (max-width: 77rem) {
+
+    .slide-text {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 62rem) {
+
+    .bar {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .btn {
+        width: .8rem;
+        height: .8rem;
+    }
+
+    .slide-media .slide-text {
+        max-width: 100%;
+        text-align: center;
+        font-size: .7rem;
+        line-height: 1rem;
+    }
+
+    .navigation {
+        margin-top: 1rem;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .slide .slide-text {
+        display: none;
+    }
+
+    .media-text {
+        display: flex;
+        width: 400%;
+        height: 90%;
+        margin-left: -200%;
+        transition: all .5s ease;
+    }
+
+    .slide-media {
+        width: 100%;
+    }
+
+    #radio-1:checked ~ #medio-text {
+        margin-left: 0;
+    }
+
+    #radio-2:checked ~ #medio-text {
+        margin-left: -100%;
+    }
+
+    #radio-3:checked ~ #medio-text {
+        margin-left: -200%;
+    }
+
+    #radio-4:checked ~ #medio-text {
+        margin-left: -300%;
+    }
+
+}
